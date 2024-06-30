@@ -73,24 +73,46 @@ body {
 
 .index main{
   display: flex;
-  padding: 15px;
+  padding: 100px;
+  height: 300px;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-
-.index main .accroche{
-  flex-direction: column;
+.index .accroche {
   display: flex;
-  align-items: center;
-  margin: auto;
-  padding-right: 7%;
-  padding-top: 10%;
-  border: 2px solid  rgb(214, 39, 39);
-  padding: 5%;
-  border-radius:10px;
+  flex-direction: column;
+  text-align: center;
+  border: 2px solid rgb(214, 39, 39);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
+.index .accroche h1 {
+  color: rgb(214, 39, 39);
+}
+
+.index .contact {
+  text-align: center;
+  position: absolute;
+  bottom: 20px; /* Adjust this value as needed */
+}
+
+.index .contact div {
+  margin-bottom: 10px;
+}
+
+.index .contact img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.index .contact a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+}
 
 .index main section{
   display: flex;
@@ -115,6 +137,10 @@ body {
 
 .index h1, .index p{
   font-size:x-large
+}
+
+#linkedin,#phone {
+  padding-right: 80px;  
 }
 /*--------------hardskills------------*/
 
@@ -144,69 +170,101 @@ body {
 }
 
 /*-------------ppp--------------*/
-.ppp main{
+.ppp main {
   display: flex;
-  flex-direction: row;
+  justify-content: center; /* Centre les éléments horizontalement */
+  align-items: center; /* Centre les éléments verticalement */
+  height: 100vh; /* Utilise toute la hauteur de la vue */
 }
 
 .ppp main section {
   border: 3px solid rgb(75, 75, 224);
-  padding: 2%;
-  margin: 2%;
-  border-radius :10px;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
   width: 500px;
+  max-width: 90%; /* Limite la largeur maximale à 90% de la largeur disponible */
+  
 }
 
 /*-----------Projets---------------*/
-.projets main{
-display: flex;
-flex-direction: row;
-
+.projets h2 { 
+  color: rgb(75, 75, 224);
 }
 
-.projets main section{
+.projets main {
+  display: flex;
+  flex-wrap: wrap; /* Permet aux sections de passer à la ligne suivante quand elles ne rentrent pas */
+  justify-content: space-between; /* Répartit les sections sur la ligne */
+}
+
+/* .projets main section représente chaque section de projet */
+.projets main section {
+  width: calc(33.33% - 4%); /* Calcul de la largeur pour que trois sections tiennent sur une ligne avec un petit espace entre elles */
   border: 3px solid rgb(75, 75, 224);
   padding: 2%;
   margin: 2%;
-  border-radius :10px;
-  width: 700px;
+  border-radius: 10px;
+  box-sizing: border-box; /* S'assure que la largeur inclut les bordures et les marges */
 }
 
+/* Style pour les images à l'intérieur des sections */
+.projets main section img {
+  
+  height : 200px;
+  width : 250px;
+  padding-left: 50px;
 
-.projets h1, .projets h2{
+}
+
+/* Les styles ci-dessous ajustent le texte à l'intérieur des sections */
+.projets h3 {
   padding-left: 3%;
 }
-.projets p{
+
+.projets p {
   padding: 2%;
   padding-bottom: 0%;
- 
+  margin-bottom: 0; /* Supprime le margin-bottom par défaut des paragraphes */
 }
+
+#ez-stage,#dahu {
+  height : 300px !important;
+  width: 150px !important;
+}
+
 /*--------------sport------------------------*/
-.sport main{
+.sport-main {
   display: flex;
-  flex-direction: row;
-  
-  }
-  
-  .sport main section{
-    border: 3px solid rgb(75, 75, 224);
-    padding: 2%;
-    margin: 2%;
-    border-radius :10px;
-    width: 500px;
+  justify-content: center; /* Centre le contenu horizontalement */
+  align-items: flex-start; /* Aligne les éléments en haut verticalement */
+}
 
-  }
-  .natation{
-    background: url("image/natation.jpg");
-    background-size: cover;
-  }
-  .natation p,.natation h3{
-    color: white;
-    font-size: large;
-  }
+.sport-description {
+  flex: 1; /* Utilise l'espace disponible */
+  border: 3px solid rgb(75, 75, 224);
+  padding: 2%;
+  margin: 2%;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.sport-image {
+  padding-top: 50px;
+  
  
+  flex: 1; /* Utilise l'espace disponible */
+  display: flex;
+  justify-content: center; /* Centre l'image horizontalement */
+  align-items: center; /* Centre l'image verticalement */
+}
 
-
+.sport-image img {
+  width: 80%; /* Utilise 100% de la largeur de la section */
+  height: auto; /* Ajuste automatiquement la hauteur en fonction de la largeur */
+  max-height: 400px; /* Limite la hauteur maximale de l'image */
+  border-radius: 10px; /* Arrondi les coins de l'image si nécessaire */
+}
 
 
 
