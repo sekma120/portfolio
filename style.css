@@ -98,6 +98,9 @@ body {
 }
 .index .contact{
   padding-top: 30%;
+  display : flex;
+  flex-direction:column;
+  align-items:center;
 }
 
 .index .contact p{
